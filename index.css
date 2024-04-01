@@ -1,0 +1,235 @@
+body{
+    background-color: gray;
+    
+}
+button{
+    text-decoration: none;
+    border-color: burlywood;
+    background-color: blanchedalmond;
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(123, 223, 223, 0.2) inset;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: no-wrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 723;
+    padding: 19px 39px 18px;
+    font-size: 18px;
+    color: gray;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.buttonClass{
+    background-color: rgb(235, 213, 180);
+}
+
+.active{
+    background-color:darkolivegreen;
+    color: blanchedalmond;
+}
+
+.container {
+    height:100px;
+}
+
+.header { 
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    /*background-color:cornflowerblue*/
+
+}
+.main { 
+    position: absolute;
+    overflow: hidden;
+    top: 80px;
+    bottom: 30px;
+    right: 5px;
+    left: 5px;
+    grid-area: main;
+    border: 1px solid black;
+}
+  .footer { 
+    grid-area: footer; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.clover{
+    position: absolute;
+    background: url(clover.png);
+    background-size: cover;
+    transform: translate();
+    animation: animate_clover 2s linear infinite;
+}
+@keyframes animate_clover {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        /*filter: hue-rotate(0deg);*/
+        filter: saturate(100%);
+        filter: blur(0px);
+    }
+    100%{
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        /*filter: hue-rotate(360deg);*/
+        filter: saturate(0%);
+        filter: blur(20px);
+    }
+}
+
+.hearts{
+    position: absolute;
+    background: url(hearts.png);
+    background-size: cover;
+    transform: translate();
+    animation: animate_hearts 2s linear infinite;
+}
+
+@keyframes animate_hearts {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+
+    }
+    100%{
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+
+    }
+}
+
+.click_bubbles{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 5px solid maroon;
+    border-radius: 50%;
+    pointer-events: none;
+    animation-name: click_animation_bubbles;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+}
+@keyframes click_animation_bubbles {
+    from{
+        opacity: 1;
+        transform: scale(0);
+    }
+    to{
+        opacity: 0;
+        transform: scale(1);
+
+    }
+}
+
+.click_hearts{
+    position: absolute;
+    background-color: pink;
+    animation-name: click_animation_hearts;
+    animation-timing-function: linear;
+    animation-duration: .8s;
+}
+@keyframes click_animation_hearts{
+    from{
+        opacity: 1;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+.click_balloons{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    pointer-events: none;
+    animation-name: click_animation_balloon;
+    animation-timing-function: linear;
+    animation-duration: .8s;
+
+}
+
+@keyframes click_animation_balloon {
+    from{
+        opacity: 1;
+        transform: scale(0);
+    }
+    to{
+        opacity: 0;
+        transform:  scale(10);
+        /*top:20%;*/
+    }
+}
+/*same code, just without from/to shortcuts*/
+
+/* @keyframes click_animation{
+    0%{
+        opacity: 1;
+        transform: scale(0.1);
+    }
+    10%{
+        opacity: .9;
+        transform: scale(0.2);
+    }
+    20%{
+        opacity: .8;
+        transform: scale(0.3);
+    }
+    30%{
+        opacity: .7;
+        transform: scale(0.4);
+    }
+    40%{
+        opacity: .6;
+        transform: scale(0.5);
+    }
+    50%{
+        opacity: .5;
+        transform: scale(0.6);
+    }
+    60%{
+        opacity: .4;
+        transform: scale(0.7);
+    }
+    70%{
+        opacity: .3;
+        transform: scale(0.8);
+    }
+    80%{
+        opacity: .2;
+        transform: scale(0.9);
+    }
+    90%{
+        opacity: .1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: .09;
+        transform: scale(1.1);
+    }
+} */
+
